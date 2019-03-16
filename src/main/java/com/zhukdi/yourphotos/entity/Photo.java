@@ -1,6 +1,7 @@
 package com.zhukdi.yourphotos.entity;
 
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,10 +10,11 @@ import javax.persistence.Table;
 import java.util.Date;
 
 @Entity
-@Table(name = "photos")
+@Table(name = "photo")
 public class Photo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "photo_id")
     private Long id;
     private String caption;
     private Double latitude;
